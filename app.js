@@ -1,7 +1,7 @@
 
 let valorCopas;
 
-valorCopas = parseInt(prompt("Tu pais cuantos mundiales de futbol tiene?"));
+valorCopas = parseInt(prompt("Cuantos mundiales de futbol tiene tu pais?"));
 
 if (valorCopas > 1) {
     console.log("Claramente tu pais es Mudialista!!.");
