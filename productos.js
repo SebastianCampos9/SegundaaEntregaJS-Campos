@@ -1,4 +1,4 @@
-class Productos {
+class productos {
     
     media;
     boxer; 
@@ -31,25 +31,27 @@ megusta = function() {
 
 }
 
-class Medias{
+class medias{
 
     color;
     talle;
     corta;
     larga;
     material;
+    precio;
 
 
-    constructor(color, talle, corta, larga, material)
-{
+//     constructor(color, talle, corta, larga, material)
+// {
 
-    this.color = color;
-    this.talle = talle;
-    this.corta = corta;
-    this.larga = larga;
-    this.material = material;
+//     this.color = color;
+//     this.talle = talle;
+//     this.corta = corta;
+//     this.larga = larga;
+//     this.material = material;
+//     this.precio = precio;
 
-}
+// }
 
 agarrar = function() {
 console.log("El Usuario agarra una Media de color"+ this.color + 'y de talle' + this.talle );

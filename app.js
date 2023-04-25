@@ -49,6 +49,53 @@
 // }
 
 
+let carrito = [];
+
+
+function cargarUnaMedia() {
+
+    const nuevaMedia = new medias ();
+    nuevaMedia.color = prompt('Ingrese el color');
+    nuevaMedia.talle = prompt('Ingrese el talle');
+    nuevaMedia.larga = prompt('Larga? si/no');
+    nuevaMedia.corta = prompt('Corta? si/no');
+    nuevaMedia.material = prompt('Ingrese el tipo de material');
+    nuevaMedia.precio = Number(prompt('Ingrese el precio'))
+
+    carrito.push(nuevaMedia);
+}
+
+
+
+const cargarMedia = () => {
+    let seguir;
+    do{
+       cargarUnaMedia();
+       seguir = prompt('Desea ingresar otra media? si/no');
+
+} while(seguir == 'si');
+
+}
+
+
+function mostrarCarritoDeMedias() {
+    
+    carrito.forEach((medias) => {
+        alert(`color: ${medias.color} \n talle: ${medias.talle} \n larga: ${medias.larga} \n corta: ${medias.corta} \n material: ${medias.material} \n precio: ${medias.precio} \n\n`)
+    })
+
+
+}
+
+cargarUnaMedia();
+cargarMedia();
+mostrarCarritoDeMedias();
+
+
+
+
+
+
 function sumaDePrendas(precio1, precio2)
 {
     const total = precio1 + precio2; 
@@ -67,18 +114,3 @@ console.log('Mas IVA:' + sumaDePrendas(2045,5245)*1.21);
 const laMejorMedia = {color: "Negra", talle: 2 , corta: 3, material: "Algodon"}
 
 console.log(laMejorMedia);
-
-function Media(color, talle, corta, larga, material)
-{
-    this.color = color;
-    this.talle = talle;
-    this.corta = corta;
-    this.larga = larga;
-    this.material = material;
-}
-
-///genero mis objetos de tipo Persona usando el constructor
-
-const mediaf1 = new Media("Azul", 2, 3, 3, "Lana"); 
-
-console.log(mediaf1);
